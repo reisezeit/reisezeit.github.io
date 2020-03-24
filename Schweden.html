@@ -646,3 +646,9 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script type='text/javascript' src='./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.6'></script>
 	</body>
 </html>
+
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
